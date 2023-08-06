@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<script language="JavaScript">	
+		var x;
+		while(true)
+		{
+			x = prompt("Enter the value of x");
+			if (!isNaN(x))
+			{
+				break;
+			}
+			alert("Please enter a valid number!");
+		}
+		var result = 3 * Math.pow(x, 3) - 7 * Math.pow(x, 2) + 2 * x + 5;
+		document.writeln("The value of 3×"+x);
+		document.writeln("<sup>3</sup>-7×"+x);
+		document.writeln("<sup>2</sup>+2×"+x);
+		document.writeln("+5 is: " + result);
+	</script>
+	</body>
+</html>

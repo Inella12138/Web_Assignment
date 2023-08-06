@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	<!--定义两个全局变量output和error控制输出-->
+	var output = "";
+	var error = "";
+	
+	function checkName() {
+    const name = document.getElementById("name").value;
+      if(name.length==0) 
+	  {
+		error = error + "Please enter your name!\n";
+      }
+	  else if(name.length>15)
+	  {
+		error = error + "Name should not be longer than 15 letters!\n";
+	  }
+	  else
+	  {
+		output = output + "Name: "+name+"\n";
+	  }
+	}
+	
+	function checkAge(){
+	const age = document.getElementById("age").value;
+	while(true){
+	if(age.length==0) 
+	  {
+		error = error + "Please enter your age!\n";
+		break;
+      }
+	if (isNaN(age) || age < 0){
+			error = error + "Age should be a valid number!\n";
+			break;
+		}
+	else{
+			output =output + "Age: "+age+"\n";
+			break;
+		}
+	}
+	}
+  
+	function checkGender() {
+    const genderList = document.getElementsByName("gender");
+    for( i = 0; i < genderList.length; i++) {
+      if(genderList[i].checked) 
+	  {
+        output = output + "Gender: " + genderList[i].value+"\n";
+      }
+    }
+	if (!genderList[0].checked&&!genderList[1].checked)
+	{
+		error = error + "Please choose your gender!\n";
+	}
+  }
+	
+	function checkPhone(){
+	const tel = document.getElementById("tel").value;
+	while(true){
+	if(tel.length==0) 
+	  {
+		error = error + "Please enter your phone number!\n";
+		break;
+      }
+	if (isNaN(tel)){
+			error = error + "Please enter a valid phone number!\n";
+			break;
+		}
+	else{
+			output =output + "Phone: "+tel+"\n";
+			break;
+		}
+	}
+	}
+	
+	function checkHobby(){
+	const hobbyList = document.getElementsByName("hobbies");
+	for( i = 0; i < hobbyList.length; i++) {
+      if(hobbyList[i].checked) 
+	  {
+        output = output + "Hobbies: "
+		break;
+      }
+    }
+	for( i = 0; i < hobbyList.length; i++) {
+	if(hobbyList[i].checked) 
+	  {
+		output = output + hobbyList[i].value + "  "
+	  }
+	}
+	}
+	
+	function check(){
+		output = "";
+		error = "";
+		checkName();
+		checkAge();
+		checkGender();
+		checkPhone();
+		checkHobby();
+		document.getElementById('output').value = output;
+		document.getElementById('error').value = error;
+	}
+        
+    </script>
+</head>
+<body>
+		
+	<table style="width:70%;text-align:left;margin:0 auto;border:3px solid gray"
+	cellpadding="10"cellspacing="10">
+	<tr><td style="width:30%">
+            Name:</td><td><input type="text"id="name"/></td><tr><td>
+            Age:</td><td><input type="text"id="age"/></td><tr><td>		
+			Gender:</td><td>
+			<input type="radio" name="gender" value="Male"/>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="Female"/>
+            <label for="female">Female</label></td><tr><td>
+			Phone:</td><td><input type="tel" id="tel"/></td><tr><td>
+			Hobbies:</td><td><input type="checkbox" name="hobbies" value="Reading"/>
+            <label for="male">Reading</label>
+            <input type="checkbox" name="hobbies" value="Sports"/>
+            <label for="female">Sports</label>
+			<input type="checkbox" name="hobbies" value="Movies"/>
+            <label for="male">Movies</label>
+			<input type="checkbox" name="hobbies" value="Traveling"/>
+            <label for="male">Traveling</label></td><tr><td>
+			<input type="submit" value="Submit" onclick="check()"/>
+			</td><td>&nbsp;</td></tr><tr><td valign="top">
+			Output:</td>
+			<td>
+			<table><tr><td><textarea id="output" style="height:100px;width:700px" ></textarea>
+			</td></tr></table></td></tr><tr><td valign="top">
+			Error:</td>
+			<td>
+			<table><tr><td><textarea id="error" style="height:100px;width:700px" readonly="readonly"></textarea>
+			</td></tr></table></td></tr>
+		</table>	            		
+	
+</body>
+</html>

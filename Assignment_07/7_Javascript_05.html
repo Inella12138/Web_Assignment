@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style type="text/css">
+		table
+		{ 
+			width:70%;text-align:center;border-collapse:collapse
+		} 
+		th
+		{ 
+			background-color:#f5f5f5
+		}
+	</style>		
+	</head>
+	<body>
+	<table border="1"align="center"cellpadding="20"height="400">
+	<th>x</th><th>x<sup>2</sup></th><th>1/x</th><th>√x</th>
+	<script language="JavaScript">
+		for (i=1;i<6;i++ )
+		{
+			var c2=i*i;
+			var c3=1/i;
+			c3=Math.floor(c3*100)/100;
+			var c4=Math.sqrt(i);
+			c4=Math.floor(c4*100)/100;
+			document.writeln("<tr><td>"+i);
+			document.writeln("</td><td>"+c2);
+			document.writeln("</td><td>"+c3);
+			document.writeln("</td><td>"+c4);
+			document.writeln("</td></tr>");
+		}
+	</script>
+	<table>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<script language="JavaScript">
+		var sum = 0;
+		var n;
+		while(true)
+		{
+			n = prompt("Please enter a number");
+			if (!isNaN(n))
+			{
+				break;
+			}
+			alert("Please enter a valid number!");
+		}
+		for (i=1;i<=n;i++) 
+		{
+			sum = sum + i;
+		} 
+		document.writeln("The sum of numbers from 1 to "+n);
+		document.writeln("is "+sum);
+	</script>
+	</body>
+</html>

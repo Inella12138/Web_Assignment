@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Portal Registration</title>
+    <link rel="stylesheet" href="5_styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="5_logo.jpeg" alt="Corporate Logo">
+            <p>TravelEveryday Co.,Ltd</p>
+        </header>
+
+        <form action="mailto:inella12138@gmail.com" method="post">
+            Favorite Travel Destination:  
+			<select name="Favorite Travel Destination">
+				<option value="Singapore" selected>Singapore</option>
+				<option value="Malaysia">Malaysia</option>
+				<option value="Indonesia">Indonesia</option>
+				<option value="Thailand">Thailand</option>
+				<option value="China">China</option>
+			</select><br/>
+			
+			<label for="name">Name:</label>
+            <input type="text" name="name" required><br/>
+			
+			<label>Gender:</label>
+            <input type="radio" name="gender" value="male" checked="checked">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female">
+            <label for="female">Female</label><br/><br/>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" required>
+
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" value="2023-08-01" name="birthdate" required>
+
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <footer>
+            <p>Wish you a happy day!</p>
+        </footer>
+    </div>
+</body>
+</html>

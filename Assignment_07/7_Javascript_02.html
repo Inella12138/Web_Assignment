@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<script language="JavaScript">
+		var t;
+		while(true)
+		{
+			t = prompt("Enter the time of the day");
+			if (!isNaN(t))
+			{
+				if(t>=0&&t<=24)
+				{
+					break;
+				}
+			}
+			alert("Please enter a valid time!");
+		}
+		if (t < 12) 
+		{
+			alert("Good Morning");
+			document.writeln("Good Morning");
+		} 
+		else 
+		{
+		alert("Good Afternoon");
+		document.writeln("Good Afternoon");
+		}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<script language="JavaScript">
+		var name = prompt("Please enter your name");
+		var t;
+		while(true)
+		{
+			t = prompt("Please enter the time of the day");
+			if (!isNaN(t))
+			{
+				if(t>=0&&t<=24)
+				{
+					break;
+				}
+			}
+			alert("Please enter a valid time!");
+		}
+		if (t < 12) 
+		{
+			alert("Good Morning "+name);
+			document.writeln("Good Morning "+name);
+		} 
+		else 
+		{
+		alert("Good Afternoon "+name);
+		document.writeln("Good Afternoon "+name);
+		}
+	</script>
+	</body>
+</html>
